@@ -24,8 +24,8 @@ jobs:
       run: mvn clean test
 
     - name: Upload Extent Report
-      if: always()  # Run this step even if tests fail
-      uses: actions/upload-artifact@v3
+      if: always()
+      uses: actions/upload-artifact@v4
       with:
         name: ExtentReport
         path: test-output/API_Report.html
